@@ -1,25 +1,25 @@
-from functions.get_files_content import get_file_content
+from functions.run_python import run_python_file
 
 def run_tests():
-    # Test 1: Get content of lorem.txt (to check truncation)
-    print("Result for 'lorem.txt' content:")
-    print(get_file_content("calculator", "lorem.txt"))
+    # Test 1: Run main.py without arguments
+    print("Result for running 'main.py':")
+    print(run_python_file("calculator", "main.py"))
     
-    # Test 2: Get content of main.py
-    print("\nResult for 'main.py' content:")
-    print(get_file_content("calculator", "main.py"))
+    # Test 2: Run main.py with arguments ["3 + 5"]
+    print("\nResult for running 'main.py' with args ['3 + 5']:")
+    print(run_python_file("calculator", "main.py", ["3 + 5"]))
     
-    # Test 3: Get content of pkg/calculator.py
-    print("\nResult for 'pkg/calculator.py' content:")
-    print(get_file_content("calculator", "pkg/calculator.py"))
+    # Test 3: Run tests.py
+    print("\nResult for running 'tests.py':")
+    print(run_python_file("calculator", "tests.py"))
     
-    # Test 4: Get content of /bin/cat (outside working directory)
-    print("\nResult for '/bin/cat' content:")
-    print(get_file_content("calculator", "/bin/cat"))
+    # Test 4: Run ../main.py (outside working directory)
+    print("\nResult for running '../main.py':")
+    print(run_python_file("calculator", "../main.py"))
     
-    # Test 5: Get content of non-existent file
-    print("\nResult for 'pkg/does_not_exist.py' content:")
-    print(get_file_content("calculator", "pkg/does_not_exist.py"))
+    # Test 5: Run nonexistent.py
+    print("\nResult for running 'nonexistent.py':")
+    print(run_python_file("calculator", "nonexistent.py"))
 
 if __name__ == "__main__":
     run_tests()
