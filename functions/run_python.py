@@ -1,5 +1,26 @@
 import os
 import subprocess
+from google.genai.types import FunctionDeclaration, Schema, Type
+
+schema_run_python_file = FunctionDeclaration(
+    name="run_python_file",
+    description="Executes a Python file with optional arguments, constrained to the working directory, with a 30-second timeout.",
+    parameters=Schema(
+        type=Type.OBJECT,
+        properties={
+            "file_path": Schema(
+                type=Type.STRING,
+                description="The path to the Python file to execute, relative to the working directory.",
+            ),
+            "args": Schema(
+                type=Type.ARRAY,
+                items=Schema(type=Type.STRING),
+                description="Optional command-line arguments to pass to the Python file.",
+            ),
+        },
+        required=["file_path"],
+    ),
+)
 
 def run_python_file(working_directory, file_path, args=[]):
     try:
