@@ -4,7 +4,7 @@ A Python-based AI agent system integrated with the Google Gemini API, designed t
 
 ## About
 
-The `Ai_Agents` project is an AI-powered coding assistant that leverages the Google Gemini API to process user prompts and perform tasks such as listing directory contents, reading files, writing files, and executing Python scripts. The agent operates within a constrained working directory (`calculator/`) to ensure security, using a set of predefined functions exposed to the LLM via function declarations. The system maintains a conversation history to handle multi-step tasks, with a system prompt guiding the LLM to plan and execute function calls appropriately.
+The `Ai_Coding_Agent` project is an AI-powered coding assistant that leverages the Google Gemini API to process user prompts and perform tasks such as listing directory contents, reading files, writing files, and executing Python scripts. The agent operates within a constrained working directory (`calculator/`) to ensure security, using a set of predefined functions exposed to the LLM via function declarations. The system maintains a conversation history to handle multi-step tasks, with a system prompt guiding the LLM to plan and execute function calls appropriately.
 
 Key features:
 - **File Operations**: List directory contents, read file contents (with truncation at 10,000 characters), and write/overwrite files.
@@ -25,7 +25,7 @@ Key features:
 ## Project Structure
 
 ```
-Ai_Agents/
+Ai_Coding_Agent/
 ├── calculator/
 │   ├── lorem.txt           # Sample text file (>20,000 characters)
 │   ├── main.txt            # Test file from write_file
@@ -51,8 +51,8 @@ Ai_Agents/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Raza-learner/Ai_Agents.git
-   cd Ai_Agents
+   git clone https://github.com/Raza-learner/Ai_Coding_Agent.git
+   cd Ai_Coding_Agent
    ```
 
 2. **Set up a virtual environment**:
@@ -185,4 +185,5 @@ For questions or suggestions:
 ---
 
 © 2025 Raza-learner. Built with ❤️ for AI and coding enthusiasts.
+
 
