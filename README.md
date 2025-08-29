@@ -43,6 +43,7 @@ Ai_Coding_Agent/
 │   ├── run_python_file.py  # Executes Python scripts
 │   ├── write_file.py       # Writes/overwrites files
 │   └── prompt.py           # Stores system prompt (early version)
+|── main.py                 # Main operation file
 ├── config.py               # Defines MAX_CHARS for file reading
 └── .env                    # Stores API keys (not committed)
 ```
@@ -185,6 +186,7 @@ For questions or suggestions:
 ---
 
 © 2025 Raza-learner. Built with ❤️ for AI and coding enthusiasts.
+
 
 
 
